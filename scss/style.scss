@@ -1,0 +1,55 @@
+@import './config';
+
+body {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $light-gray;
+    @include flex();
+}
+
+
+.container {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+
+    .image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        padding: 10px;
+        text-align: center;
+
+        h1 {
+            font-size: 20px;
+            margin: 10px 0 20px 0;
+            color: $dark-blue;
+        }
+
+        p {
+            font-size: 14px;            
+            line-height: 1.4;
+            color: $grayish-blue;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    @media only screen and (max-width: 330px) {
+        max-width: 95%;
+    }
+}
